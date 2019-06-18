@@ -32,10 +32,10 @@ class Server {
     start() {
         // asignacion del puerto del servidor
         this.app.listen(this.app.get('port'), () => {
-            console.log(`Server on port`, this.app.get('port'));
+            console.log('Server on port', this.app.get('port'));
         });
     }
 }
-// ejecuta la clase y me devuelve un objeto
+// guarda el objeto en una costante que ejecuta la clase y me devuelve un objeto
 const server = new Server();
 server.start();

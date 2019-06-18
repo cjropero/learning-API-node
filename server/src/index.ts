@@ -3,6 +3,10 @@
 // npm i @types/express -D
 import express, { Application } from 'express';
 
+// importa los archivo de rutas
+import indexRoutes from "./routes/indexRoutes";
+import gamesRoutes from "./routes/gamesRoutes";
+
 // clase que inicializa el servidor
 class Server {
   // inicializa propiedad app de tipo aplicacion de express
@@ -36,10 +40,10 @@ class Server {
   start(): void {
     // asignacion del puerto del servidor
     this.app.listen(this.app.get('port'), () => {
-      console.log(`Server on port`, this.app.get('port'));
+      console.log('Server on port', this.app.get('port'));
     });
   }
 }
-// ejecuta la clase y me devuelve un objeto
+// guarda el objeto en una costante que ejecuta la clase y me devuelve un objeto
 const server = new Server();
 server.start();
